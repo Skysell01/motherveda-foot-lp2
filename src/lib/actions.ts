@@ -46,7 +46,34 @@ export const submitLead = createServerFn({ method: "POST" })
     recentLeads.set(phone, Date.now());
 
     // 1. Send to Google Sheets Webhook
-    const GOOGLE_SHEET_WEBHOOK = process.env.GOOGLE_SHEET_WEBHOOK;
+    let GOOGLE_SHEET_WEBHOOK = process.env.GOOGLE_SHEET_WEBHOOK;
+
+    if (!GOOGLE_SHEET_WEBHOOK) {
+      try {
+        const vinxiHttp = "vinxi/http";
+        const { getEvent } = await import(vinxiHttp);
+        const event = getEvent();
+        const cfEnv = (event?.context as any)?.cloudflare?.env;
+        if (cfEnv?.GOOGLE_SHEET_WEBHOOK) {
+          GOOGLE_SHEET_WEBHOOK = cfEnv.GOOGLE_SHEET_WEBHOOK;
+        }
+      } catch (e) {
+        // Ignore, not in Vinxi environment or context not available
+      }
+    }
+
+    if (!GOOGLE_SHEET_WEBHOOK) {
+      try {
+        const cfWorkersModule = "cloudflare:workers";
+        const cfWorkers = await import(cfWorkersModule);
+        if (cfWorkers?.env && (cfWorkers.env as any).GOOGLE_SHEET_WEBHOOK) {
+          GOOGLE_SHEET_WEBHOOK = (cfWorkers.env as any).GOOGLE_SHEET_WEBHOOK;
+        }
+      } catch (e) {
+        // Ignore, cloudflare:workers only available in Cloudflare runtime
+      }
+    }
+
     if (GOOGLE_SHEET_WEBHOOK) {
       try {
         await fetch(GOOGLE_SHEET_WEBHOOK, {
@@ -65,7 +92,7 @@ export const submitLead = createServerFn({ method: "POST" })
         console.error("Error sending to Google Sheet:", error);
       }
     } else {
-      console.warn("GOOGLE_SHEET_WEBHOOK is not set in .env");
+      console.warn("GOOGLE_SHEET_WEBHOOK is not set in any environment");
     }
 
     return { success: true, duplicate: false, message: "" };
