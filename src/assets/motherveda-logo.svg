@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 75 260 240" width="100%" height="100%">
+  <!-- Logo Graphics Group -->
+  <g id="logo-graphics">
+    <!-- Circle Ring open at top-right -->
+    <path d="M 252 95 
+             A 76 76 0 1 0 273 203" 
+          fill="none" 
+          stroke="#3E533C" 
+          stroke-width="3.5" 
+          stroke-linecap="round"/>
+          
+    <!-- Bottom-Right Leaf on the Circle -->
+    <g transform="translate(272, 201) rotate(22)">
+      <path d="M 0 0 C 12 -8, 22 -8, 26 8 C 14 15, 4 12, 0 0 Z" fill="#3E533C" />
+      <path d="M 0 0 Q 13 2 26 8" stroke="#FFFFFF" stroke-width="1.2" fill="none" />
+      <!-- Small secondary leaf next to it -->
+      <path d="M 2 6 C 8 5, 12 11, 10 16 C 3 15, 0 10, 2 6 Z" fill="#3E533C" transform="rotate(-30) translate(-2, 2)" />
+    </g>
+
+    <!-- Mortar (Bowl) -->
+    <path d="M 162 185 L 238 185 C 233 212, 218 221, 200 221 C 182 221, 167 212, 162 185 Z" 
+          fill="none" 
+          stroke="#BC9F80" 
+          stroke-width="2.5" 
+          stroke-linejoin="round" />
+
+    <!-- Pestle -->
+    <path d="M 223 194 L 250 157 C 252 154, 257 157, 254 161 L 229 198 Z" 
+          fill="#BC9F80" />
+    <path d="M 250 157 C 247 153, 255 146, 258 150 C 261 154, 253 160, 250 157 Z" 
+          fill="#BC9F80" />
+
+    <!-- Plant Stem -->
+    <path d="M 200 208 C 200 195, 198 180, 200 160" 
+          stroke="#3E533C" 
+          stroke-width="2.5" 
+          fill="none" 
+          stroke-linecap="round" />
+          
+    <!-- Center Leaf -->
+    <path d="M 200 165 C 190 143, 190 112, 200 87 C 210 112, 210 143, 200 165 Z" 
+          fill="#3E533C" />
+    <line x1="200" y1="160" x2="200" y2="97" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" />
+
+    <!-- Left Leaf -->
+    <path d="M 198 160 C 180 152, 162 143, 159 130 C 173 130, 189 143, 198 160 Z" fill="#3E533C" />
+    <path d="M 198 160 C 188 152, 178 143, 166 136" stroke="#FFFFFF" stroke-width="1" fill="none" stroke-linecap="round" />
+    
+    <!-- Right Leaf -->
+    <path d="M 202 160 C 220 152, 238 143, 241 130 C 227 130, 211 143, 202 160 Z" fill="#3E533C" />
+    <path d="M 202 160 C 212 152, 222 143, 234 136" stroke="#FFFFFF" stroke-width="1" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="270" 
+        font-family="'Fraunces', 'Times New Roman', serif" 
+        font-size="31" 
+        font-weight="bold" 
+        fill="#3E533C" 
+        text-anchor="middle" 
+        letter-spacing="2.5">JEEVAN TATVA</text>
+        
+  <!-- AYURVEDA line -->
+  <line x1="82" y1="295" x2="147" y2="295" stroke="#BC9F80" stroke-width="1" />
+  
+  <text x="200" y="300" 
+        font-family="'Plus Jakarta Sans', 'Arial', sans-serif" 
+        font-size="13" 
+        font-weight="500" 
+        fill="#BC9F80" 
+        text-anchor="middle" 
+        letter-spacing="5">AYURVEDA</text>
+        
+  <line x1="253" y1="295" x2="318" y2="295" stroke="#BC9F80" stroke-width="1" />
+</svg>

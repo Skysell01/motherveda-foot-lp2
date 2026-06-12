@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { submitLead } from "@/lib/actions";
-import logo from "@/assets/motherveda-logo.png";
+import logo from "@/assets/motherveda-logo.svg";
 import heroImg from "@/assets/hero-transformation.jpg";
 import detoxDemoImg from "@/assets/detox-patch-demo.jpg";
 import productBoxImg from "@/assets/product-box.png";
