@@ -194,7 +194,7 @@ function MultiStepForm({ onSubmitted, className = "" }: { onSubmitted: () => voi
   };
 
   return (
-    <div className={`rounded-3xl bg-card p-6 shadow-soft ring-1 ring-herb-deep/10 ${className}`}>
+    <div className={`rounded-3xl bg-card p-6 form-glow ${className}`}>
       {step === 1 ? (
         <form onSubmit={handleStep1Submit} className="space-y-4">
           <div className="text-center md:text-left">
@@ -244,7 +244,7 @@ function MultiStepForm({ onSubmitted, className = "" }: { onSubmitted: () => voi
 
           <button
             type="submit"
-            className="w-full rounded-full bg-gradient-herb py-3 text-sm font-bold text-primary-foreground shadow-soft hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="w-full rounded-full bg-gradient-herb py-3 text-sm font-bold text-primary-foreground shadow-soft hover:scale-[1.02] active:scale-[0.98] transition-all animate-cta-shake-flash"
           >
             Continue
           </button>
@@ -316,7 +316,7 @@ function MultiStepForm({ onSubmitted, className = "" }: { onSubmitted: () => voi
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-full bg-gradient-herb py-3.5 text-sm font-bold text-primary-foreground shadow-soft hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50"
+            className="w-full rounded-full bg-gradient-herb py-3.5 text-sm font-bold text-primary-foreground shadow-soft hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 animate-cta-shake-flash"
           >
             {isSubmitting ? "Submitting..." : "Get Free Consultation"}
           </button>
@@ -477,7 +477,7 @@ function Index() {
           <button
             type="button"
             onClick={() => setConsultationModalOpen(true)}
-            className="inline-flex rounded-full bg-gradient-herb px-4 py-2 text-xs font-bold text-primary-foreground shadow-soft animate-cta-shake hover:scale-[1.03] transition-all sm:px-5 sm:py-2.5 sm:text-sm"
+            className="inline-flex rounded-full bg-gradient-herb px-4 py-2 text-xs font-bold text-primary-foreground shadow-soft animate-cta-shake-flash hover:scale-[1.03] transition-all sm:px-5 sm:py-2.5 sm:text-sm"
           >
             Talk to Expert
           </button>
@@ -624,7 +624,7 @@ function Index() {
           <div className="mt-10 text-center">
             <button
               onClick={() => setConsultationModalOpen(true)}
-              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-ink shadow-soft animate-cta-shake hover:scale-[1.03] transition-all"
+              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-ink shadow-soft animate-cta-shake-flash hover:scale-[1.03] transition-all"
             >
               Analyze Your Symptoms Now →
             </button>
@@ -740,7 +740,7 @@ function Index() {
               <div>
                 <button
                   onClick={() => setConsultationModalOpen(true)}
-                  className="rounded-full bg-gradient-herb px-8 py-4 text-sm font-bold text-primary-foreground shadow-soft hover:scale-[1.03] transition-all"
+                  className="rounded-full bg-gradient-herb px-8 py-4 text-sm font-bold text-primary-foreground shadow-soft hover:scale-[1.03] transition-all animate-cta-shake-flash"
                 >
                   Consult Expert For Details
                 </button>
@@ -783,7 +783,7 @@ function Index() {
           <div className="mt-10 text-center">
             <button
               onClick={() => setConsultationModalOpen(true)}
-              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-ink shadow-soft animate-cta-shake hover:scale-[1.03] transition-all"
+              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-ink shadow-soft animate-cta-shake-flash hover:scale-[1.03] transition-all"
             >
               Get Free Consultation Now →
             </button>
@@ -932,7 +932,7 @@ function Index() {
           <button
             type="button"
             onClick={() => setConsultationModalOpen(true)}
-            className="inline-flex items-center justify-center rounded-full bg-gold px-10 py-4.5 text-base font-bold text-ink shadow-soft animate-cta-shake hover:scale-[1.03] transition-all"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-10 py-4.5 text-base font-bold text-ink shadow-soft animate-cta-shake-flash hover:scale-[1.03] transition-all"
           >
             Start Your Health Journey
           </button>
@@ -984,7 +984,7 @@ function Index() {
           <button
             type="button"
             onClick={() => setConsultationModalOpen(true)}
-            className="flex-1 sm:flex-none rounded-full bg-gradient-herb px-6 py-2.5 text-center text-xs sm:text-sm font-bold text-primary-foreground shadow-soft animate-cta-shake sm:px-8 ml-4"
+            className="flex-1 sm:flex-none rounded-full bg-gradient-herb px-6 py-2.5 text-center text-xs sm:text-sm font-bold text-primary-foreground shadow-soft animate-cta-shake-flash sm:px-8 ml-4"
           >
             Get Free Consultation Now →
           </button>
@@ -995,7 +995,7 @@ function Index() {
       {consultationModalOpen && (
         <div className="fixed inset-0 z-[70] flex items-end justify-center bg-ink/65 px-3 py-6 backdrop-blur-sm sm:items-center sm:p-6" onClick={() => setConsultationModalOpen(false)}>
           <div
-            className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-card shadow-soft ring-1 ring-herb-deep/10 animate-in fade-in zoom-in-95"
+            className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-card form-glow animate-in fade-in zoom-in-95"
             onClick={(e) => e.stopPropagation()}
           >
             <button
