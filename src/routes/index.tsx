@@ -21,13 +21,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "MotherVeda Wellness – Free Expert Health Consultation" },
+      { title: "Jeevan Tatva Wellness – Free Expert Health Consultation" },
       {
         name: "description",
         content:
           "Take control of your health. Get personalized guidance from wellness experts on Diabetes support, weight management, and metabolism improvement.",
       },
-      { property: "og:title", content: "MotherVeda Medical Wellness Consultation" },
+      { property: "og:title", content: "Jeevan Tatva Medical Wellness Consultation" },
       {
         property: "og:description",
         content:
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const OPEN_CONSULTATION_EVENT = "motherveda:open-consultation";
+const OPEN_CONSULTATION_EVENT = "jeevantatva:open-consultation";
 
 function openConsultation(e?: React.MouseEvent) {
   if (e) e.preventDefault();
@@ -137,7 +137,7 @@ function MultiStepForm({ onSubmitted, className = "" }: { onSubmitted: () => voi
     setErrorMsg(null);
 
     // Client-side 24hr check via localStorage
-    const STORAGE_KEY = "motherveda_wellness_lead";
+    const STORAGE_KEY = "jeevantatva_wellness_lead";
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       try {
@@ -358,7 +358,7 @@ function Index() {
       usage: "Ayurvedic Diabetes Support",
       rating: 5,
       proof: review1Img,
-      q: "Mera blood sugar level maintain nahi ho raha tha aur subah uthte hi body me bohot heavy feeling rehti thi. MotherVeda ki health advisor se consultation ke baad unhone mujhe ek holistic detox routine bataya. 2 weeks pads use karne aur batayi gayi lifestyle tips follow karne ke baad sugar levels and energy me clear improvements hain.",
+      q: "Mera blood sugar level maintain nahi ho raha tha aur subah uthte hi body me bohot heavy feeling rehti thi. Jeevan Tatva ki health advisor se consultation ke baad unhone mujhe ek holistic detox routine bataya. 2 weeks pads use karne aur batayi gayi lifestyle tips follow karne ke baad sugar levels and energy me clear improvements hain.",
     },
     {
       n: "Rajesh Sharma",
@@ -382,7 +382,7 @@ function Index() {
       usage: "Lifestyle Health Issues",
       rating: 5,
       proof: review5Img,
-      q: "As a doctor myself, I appreciate their scientific yet natural approach. High blood sugar patients need natural lifestyle modifications rather than just high dosage pills. The Ayurvedic guidance MotherVeda expert provides is highly customized and safe.",
+      q: "As a doctor myself, I appreciate their scientific yet natural approach. High blood sugar patients need natural lifestyle modifications rather than just high dosage pills. The Ayurvedic guidance Jeevan Tatva expert provides is highly customized and safe.",
     },
     {
       n: "Vikram Reddy",
@@ -405,7 +405,7 @@ function Index() {
     },
     {
       q: "What products or solutions do you recommend?",
-      a: "We recommend a holistic package: customized dietary modifications, light yoga/movement routines, and our MotherVeda Premium Detox Foot Patches, which work overnight to draw out impurities, soothe tired feet, and support metabolic recovery naturally.",
+      a: "We recommend a holistic package: customized dietary modifications, light yoga/movement routines, and our Jeevan Tatva Premium Detox Foot Patches, which work overnight to draw out impurities, soothe tired feet, and support metabolic recovery naturally.",
     },
     {
       q: "How long does the consultation take?",
@@ -456,7 +456,7 @@ function Index() {
     },
     {
       title: "Overnight Natural Detox",
-      desc: "Learn how to use MotherVeda foot patches to naturally stimulate reflexology points, absorb waste, and jumpstart your metabolism while you sleep.",
+      desc: "Learn how to use Jeevan Tatva foot patches to naturally stimulate reflexology points, absorb waste, and jumpstart your metabolism while you sleep.",
       icon: "🌙",
     },
   ];
@@ -466,7 +466,7 @@ function Index() {
       {/* HEADER */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-cream/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <img src={logo} alt="MotherVeda Logo" className="h-12 sm:h-16 w-auto" />
+          <img src={logo} alt="Jeevan Tatva Logo" className="h-12 sm:h-16 w-auto" />
           <nav className="hidden items-center gap-7 text-sm font-semibold text-foreground/80 lg:flex">
             <a href="#problems" className="hover:text-herb transition-colors">Health Concerns</a>
             <a href="#benefits" className="hover:text-herb transition-colors">Our Approach</a>
@@ -543,7 +543,7 @@ function Index() {
       {/* PRODUCT BOX IMAGE */}
       <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl shadow-soft ring-1 ring-herb-deep/10">
-          <img src={productBoxImg} alt="Motherveda Foot Detox Patch product box with 30 pads" className="w-full h-auto" loading="lazy" />
+          <img src={productBoxImg} alt="Jeevan Tatva Foot Detox Patch product box with 30 pads" className="w-full h-auto" loading="lazy" />
         </div>
       </div>
 
@@ -724,10 +724,10 @@ function Index() {
                 Overnight Reflexology Support
               </span>
               <h2 className="text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-                MotherVeda Premium Detox Foot Patches
+                Jeevan Tatva Premium Detox Foot Patches
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                As part of our custom wellness plans, we often advise using MotherVeda Foot Patches. Infused with natural ingredients like bamboo vinegar, wood vinegar, and tourmaline, they stimulate acupuncture points on the soles of your feet to draw out toxins, relieve bloating, improve metabolic flow, and assist in weight management overnight.
+                As part of our custom wellness plans, we often advise using Jeevan Tatva Foot Patches. Infused with natural ingredients like bamboo vinegar, wood vinegar, and tourmaline, they stimulate acupuncture points on the soles of your feet to draw out toxins, relieve bloating, improve metabolic flow, and assist in weight management overnight.
               </p>
               
               <ul className="space-y-2.5 text-xs sm:text-sm font-semibold text-left inline-block md:block">
@@ -922,7 +922,7 @@ function Index() {
       <section className="bg-herb relative overflow-hidden py-12 text-primary-foreground sm:py-16">
         <div className="absolute inset-0 opacity-10 animate-pulse" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 space-y-6">
-          <img src={logo} alt="MotherVeda Logo" className="mx-auto h-12" />
+          <img src={logo} alt="Jeevan Tatva Logo" className="mx-auto h-12" />
           <h2 className="text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
             Start Your Path To Health & Vitality Today
           </h2>
@@ -948,7 +948,7 @@ function Index() {
       <footer className="bg-ink py-10 text-cream/70 text-xs sm:text-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between border-b border-white/10 pb-8">
-            <img src={logo} alt="MotherVeda Logo" className="h-10" />
+            <img src={logo} alt="Jeevan Tatva Logo" className="h-10" />
             <nav className="flex flex-wrap justify-center gap-5">
               <a href="#problems" className="hover:text-white">Health Concerns</a>
               <a href="#benefits" className="hover:text-white">Approach</a>
@@ -959,9 +959,9 @@ function Index() {
           </div>
           <div className="mt-8 text-center space-y-2">
             <p className="text-[10px] text-cream/40 leading-relaxed max-w-3xl mx-auto">
-              Disclaimer: The free health advice and wellness plans offered are for informational purposes only and do not substitute professional medical advice, diagnosis, or treatment. MotherVeda foot patches are natural wellness supports and are not intended to cure or prevent any disease.
+              Disclaimer: The free health advice and wellness plans offered are for informational purposes only and do not substitute professional medical advice, diagnosis, or treatment. Jeevan Tatva foot patches are natural wellness supports and are not intended to cure or prevent any disease.
             </p>
-            <p className="text-[10px] text-cream/40">© {new Date().getFullYear()} MotherVeda. All rights reserved.</p>
+            <p className="text-[10px] text-cream/40">© {new Date().getFullYear()} Jeevan Tatva. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -1007,7 +1007,7 @@ function Index() {
               ✕
             </button>
             <div className="bg-gradient-herb px-6 py-5 text-primary-foreground">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">MotherVeda Wellness</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Jeevan Tatva Wellness</p>
               <h3 className="mt-1 font-display text-xl font-bold">Ayurvedic Health Consultation</h3>
               <p className="text-xs opacity-90 mt-1">Get custom lifestyle guidance from certified advisors</p>
             </div>
